@@ -1,0 +1,48 @@
+"use client"
+
+import Button from "../components/Button"
+import IconBtn from "../components/IconBtn"
+import { SocialLinks } from "../constant/data"
+import {motion} from 'framer-motion'
+import { slideIn, textVariant2 } from "../utils/motion"
+
+const Profile = () => {
+  return (
+    <motion.section
+      variants={slideIn('left', 'tween', 0.2, 1)}
+      className="border-[1px] h-full border-gray-500 rounded-3xl secondary-text-color py-4 px-8"
+     >
+      <div className="flex items-center justify-between px-2 py-1">
+        <img src="/img/logo.svg" alt="logo" className="invert" />
+        {/* <div className="text-sm text-white italic"><span>Full Stack</span> <br /> Developer</div> */}
+      </div>
+      <div className="bg-[url(/img/star.gif)] mx-8 my-4 rounded-3xl overflow-hidden">
+        <img src="/img/profile.png" alt="" className="object-cover" />
+      </div>
+      <div className="text-center">
+        <h1 className="uppercase text-3xl font-bold text-green-500">Karma Lama</h1>
+        <div className="text-gray-400">Suryabinayak, Bhaktapur</div>
+        <a data-tooltip="Click to Call Now" href="tel:9761673294" className="hover:text-green-500 tooltip">+977 9761673294</a> <br />
+        <a data-tooltip="Click to Send Email" href="mailto:ghisingkarma740@gmail.com" className="hover:text-green-500 tooltip">ghisingkarma740@gmail.com</a>
+      </div>
+
+      <motion.div variants={textVariant2} initial="hidden" whileInView="show" className="flex items-center justify-center gap-4 my-8">
+        {SocialLinks.map(item => (
+          <IconBtn
+            key={item.id}
+            {...item}
+          />
+        ))}
+      </motion.div>
+      <a data-tooltip="Call Now" href="tel:9761673294" className="tooltip">
+        <Button title="hire me" />
+      </a>
+      <div className="mt-8 text-center text-gray-500">
+        <p>© 2023 KGT. All Rights Reserved</p>
+      </div>
+
+    </motion.section>
+  )
+}
+
+export default Profile
