@@ -4,6 +4,7 @@ import { BsGithub } from 'react-icons/bs'
 import { FiExternalLink } from 'react-icons/fi'
 import { motion } from 'framer-motion'
 import { textVariant2 } from "../utils/motion"
+import Image from "next/image"
 
 interface ProjectCardProps {
   title: string;
@@ -22,13 +23,14 @@ const ProjectCard: React.FC<ProjectCardProps> = () => {
       className="rounded-md shadow-2xl drop-shadow-md backdrop-blur shadow-black overflow-hidden hover:shadow-gray-800 hover:bg-black"
     >
       <div className="h-[250px] w-full p-4 relative">
-        <img
+        <Image
           src="https://edusportal.com/wp-content/uploads/2017/08/noun-project.jpg"
-          alt=""
+          alt="project"
+          width={100}
+          height={100}
           className="h-full w-full overflow-hidden rounded-md opacity-80"
         />
         <div className="absolute top-0 left-0 bg-gray-100 bg-opacity-50 backdrop-blur flex items-center justify-center">
-
         </div>
       </div>
       <div className="px-4 pb-2">

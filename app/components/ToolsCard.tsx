@@ -2,6 +2,7 @@
 
 import {motion} from 'framer-motion'
 import { textVariant2 } from "../utils/motion";
+import Image from 'next/image';
 
 interface ToolsCardProps {
   icon: string;
@@ -12,9 +13,11 @@ const ToolsCard:React.FC<ToolsCardProps> = ({icon, title}) => {
   return (
     <motion.div variants={textVariant2} initial="hidden" whileInView="show" className="group">
       <div className="border-[1.5px] border-gray-400 hover:border-green-500 rounded-full p-4 overflow-hidden w-full">
-        <img
+        <Image
          src={icon} 
          alt={title}
+         width={50}
+         height={50}
          className="object-cover overflow-hidden" 
         />
       </div>

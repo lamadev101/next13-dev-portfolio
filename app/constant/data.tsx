@@ -22,6 +22,7 @@ export const Countupdata = [
     count: 8
   }
 ]
+
 export const SocialLinks = [
   {
     id: 1,
@@ -131,8 +132,14 @@ export const Skills = [
     project: 3,
   },
   {
+    id:4,
+    title: "Mobile App Development",
+    subtitle: "I build Android/ios application using flutter.",
+    project: 2,
+  },
+  {
     id: 2,
-    title: "Development",
+    title: "Web Development",
     subtitle: "I build website go live with React Js, Next Js and Plain Tools",
     project: 12,
   },

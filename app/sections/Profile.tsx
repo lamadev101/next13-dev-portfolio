@@ -5,6 +5,7 @@ import IconBtn from "../components/IconBtn"
 import { SocialLinks } from "../constant/data"
 import {motion} from 'framer-motion'
 import { slideIn, textVariant2 } from "../utils/motion"
+import Image from "next/image"
 
 const Profile = () => {
   return (
@@ -13,11 +14,18 @@ const Profile = () => {
       className="border-[1px] h-full border-gray-500 rounded-3xl secondary-text-color py-4 px-8"
      >
       <div className="flex items-center justify-between px-2 py-1">
-        <img src="/img/logo.svg" alt="logo" className="invert" />
+        <Image src="/img/logo.svg" alt="logo" width={100} height={100} className="invert" />
         {/* <div className="text-sm text-white italic"><span>Full Stack</span> <br /> Developer</div> */}
       </div>
       <div className="bg-[url(/img/star.gif)] mx-8 my-4 rounded-3xl overflow-hidden">
-        <img src="/img/profile.png" alt="" className="object-cover" />
+        <Image 
+          src="/img/profile.png" 
+          alt="provile image" 
+          width={100} 
+          height={100} 
+          style={{width: "350px", height: "35vh", objectFit: 'cover'}}
+          className="object-cover" 
+        />
       </div>
       <div className="text-center">
         <h1 className="uppercase text-3xl font-bold text-green-500">Karma Lama</h1>
