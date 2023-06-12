@@ -18,7 +18,8 @@ const ToolsCard:React.FC<ToolsCardProps> = ({icon, title}) => {
          alt={title}
          width={50}
          height={50}
-         className="object-cover overflow-hidden" 
+         style={{width: "100%", height: "100%", objectFit: "cover"}}
+         className="object-cover " 
         />
       </div>
       <h2 className="text-center group-hover:text-green-500 text-white mt-2">{title}</h2>

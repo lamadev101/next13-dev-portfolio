@@ -7,6 +7,7 @@ import { textVariant2 } from "../utils/motion"
 import Image from "next/image"
 
 interface ProjectCardProps {
+  id: Number;
   title: string;
   github?: string;
   webapp?: string;
@@ -28,7 +29,7 @@ const ProjectCard: React.FC<ProjectCardProps> = () => {
           alt="project"
           width={100}
           height={100}
-          className="h-full w-full overflow-hidden rounded-md opacity-80"
+          className="h-full w-full overflow-hidden rounded-md opacity-80 object-cover"
         />
         <div className="absolute top-0 left-0 bg-gray-100 bg-opacity-50 backdrop-blur flex items-center justify-center">
         </div>

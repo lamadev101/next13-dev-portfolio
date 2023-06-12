@@ -11,10 +11,10 @@ const Portfolio = () => {
         stitle="Projects"
       />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <ProjectCard/>
-        <ProjectCard/>
-        <ProjectCard/>
-        <ProjectCard/>
+        {[1,2,3,4,5].map(item=>(
+          <ProjectCard
+            key={item} id={item} title={""} snap={undefined}          />
+        ))}
       </div>
     </section>
   )

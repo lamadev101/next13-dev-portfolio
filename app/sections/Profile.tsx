@@ -11,7 +11,7 @@ const Profile = () => {
   return (
     <motion.section
       variants={slideIn('left', 'tween', 0.2, 1)}
-      className="border-[1px] h-full border-gray-500 rounded-3xl secondary-text-color py-4 px-8"
+      className="border-[1px] h-auto md:h-full border-gray-900 rounded-3xl secondary-text-color py-4 px-8"
      >
       <div className="flex items-center justify-between px-2 py-1">
         <Image src="/img/logo.svg" alt="logo" width={100} height={100} className="invert" />
