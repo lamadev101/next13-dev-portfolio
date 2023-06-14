@@ -24,7 +24,7 @@ const Profile = () => {
           width={100} 
           height={100} 
           style={{width: "350px", height: "35vh", objectFit: 'cover'}}
-          className="object-cover" 
+          className="object-cover rounded-full" 
         />
       </div>
       <div className="text-center">
