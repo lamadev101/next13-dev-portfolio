@@ -1,6 +1,11 @@
+'use client'
+
 import Countup from "../components/Countup"
 import TitleBtn from "../components/TitleBtn"
 import { Countupdata } from "../constant/data"
+
+import {motion} from 'framer-motion'
+import { textVariant2 } from "../utils/motion"
 
 const Intro = () => {
   return (
@@ -13,14 +18,18 @@ const Intro = () => {
       </div>
       <p className="text-gray-400 text-xl mt-8">I design and code beautifully simple things and i love what i do. <br /> Just simple like that!</p>
 
-      <div className="flex items-center justify-around flex-col md:flex-row mt-12 border border-gray-600 hover:border-green-500 rounded-3xl px-4 py-8 shadow-md">
+      <motion.div 
+        variants={textVariant2}
+        initial="hidden"
+        whileInView="show"
+        className="flex items-center justify-around flex-col md:flex-row mt-12 border border-gray-600 hover:border-green-500 rounded-3xl px-4 py-8 shadow-md">
         {Countupdata.map(item => (
           <Countup
             key={item.id}
             {...item}
           />
         ))}
-      </div>
+      </motion.div>
     </section>
   )
 }

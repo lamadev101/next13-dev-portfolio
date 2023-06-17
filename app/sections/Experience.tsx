@@ -12,7 +12,7 @@ const Experience = () => {
         stitle="Experience"
       />
 
-      <div className="space-y-12 md:space-y-14">
+      <div className="space-y-12 md:space-y-14 md:mt-12">
         {EducationExperiences.map(item=>(
           <EduExpCard
             key={item.id}

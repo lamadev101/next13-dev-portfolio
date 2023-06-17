@@ -1,7 +1,11 @@
 import { FiDownloadCloud } from "react-icons/fi";
 import { Contact, Experience, Intro, Portfolio, Profile, Services, Skills } from "./sections";
+import { getProject } from "@/lib/sanity.client";
 
-export default function Home() {
+export default async function Home() {
+
+  const projects = await getProject()
+
   return (
     <main className="grid grid-cols-1 md:grid-cols-10 relative">
       <div className="h-[100vh] md:col-span-3 md:sticky top-0 bg-[#1F2125] px-4">
@@ -12,7 +16,7 @@ export default function Home() {
         <Experience/>
         <Skills/>
         <Services/>
-        <Portfolio/>
+        <Portfolio projects={projects} />
         <Contact/>
       </div>
 
@@ -29,3 +33,4 @@ export default function Home() {
     </main>
   )
 }
+

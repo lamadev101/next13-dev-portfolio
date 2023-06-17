@@ -1,4 +1,33 @@
-import {BsFacebook, BsWhatsapp, BsGithub, BsLinkedin} from 'react-icons/bs'
+import {BsGithub, BsLinkedin} from 'react-icons/bs'
+import {AiOutlineMail} from 'react-icons/ai'
+import {BiPhoneCall} from 'react-icons/bi'
+
+import { TbBrandNextjs } from 'react-icons/tb'
+import { FaReact, FaFigma } from 'react-icons/fa'
+import { RiFlutterFill } from 'react-icons/ri'
+
+export const projectCategory = [
+  {
+    id: 1,
+    title: "UX/UI",
+    icon: <FaFigma/>,
+  },
+  {
+    id: 2,
+    title: "Next Js",
+    icon: <TbBrandNextjs/>
+  },
+  {
+    id: 3,
+    title: "React Js",
+    icon: <FaReact/>
+  },
+  {
+    id: 4,
+    title: "Flutter",
+    icon: <RiFlutterFill/>
+  }
+]
 
 export const Countupdata = [
   {
@@ -26,23 +55,23 @@ export const Countupdata = [
 export const SocialLinks = [
   {
     id: 1,
-    icon: <BsFacebook/>,
-    link: "https://facebook.com"
+    icon: <AiOutlineMail/>,
+    link: "mailto:ghisingkarma740@gmail.com"
   },
   {
     id: 2,
-    icon: <BsWhatsapp/>,
-    link: "https://facebook.com"
+    icon: <BiPhoneCall/>,
+    link: "tel:9761673294"
   },
   {
     id: 3,
     icon: <BsGithub/>,
-    link: "https://facebook.com"
+    link: "https://github.com/lamadev101"
   },
   {
     id: 4,
     icon: <BsLinkedin/>,
-    link: "https://facebook.com"
+    link: "https://www.linkedin.com/in/karma-lama-0a2237235/"
   }
 ]
 
@@ -131,12 +160,12 @@ export const Skills = [
     subtitle: "I created digital products with unique ideas use Figma",
     project: 3,
   },
-  {
-    id:4,
-    title: "Mobile App Development",
-    subtitle: "I build Android/ios application using flutter.",
-    project: 2,
-  },
+  // {
+  //   id:4,
+  //   title: "Mobile App Development",
+  //   subtitle: "I build Android/ios application using flutter.",
+  //   project: 2,
+  // },
   {
     id: 2,
     title: "Web Development",
@@ -152,15 +181,16 @@ export const Skills = [
 ]
 
 export const EducationExperiences = [
-  {
-    id: 2,
-    date: "Jun 2023 - Present",
-    company: "Asha Tech",
-    job: "Flutter Developer",
-  },
+  // {
+  //   id: 2,
+  //   date: "Jun 2023 - Present",
+  //   company: "Asha Tech",
+  //   job: "Flutter Developer",
+  // },
   {
     id: 1,
-    date: "Jan 2023 - May 2023",
+    date: "Jan 2023 - Present",
+    // date: "Jan 2023 - May 2023",
     company: "Golden Duck Enterprise",
     job: "Full Stack Web Developer",
   },

@@ -12,7 +12,7 @@ const Heading: React.FC<HeadingProps> = ({ ftitle, stitle }) => {
   return (
     <motion.p
       variants={textContainer}
-      className="text-[2rem] md:text-[4rem] flex items-center gap-2 my-4"
+      className="text-3xl md:text-[4rem] flex items-center gap-2 my-8"
     >
       {/* {Array.from(ftitle).map((letter, index) => (
         <motion.span

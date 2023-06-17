@@ -23,11 +23,11 @@ const Profile = () => {
           alt="provile image" 
           width={100} 
           height={100} 
-          style={{width: "350px", height: "35vh", objectFit: 'cover'}}
+          style={{width: "100%", height: "35vh", objectFit: 'cover'}}
           className="object-cover rounded-full" 
         />
       </div>
-      <div className="text-center">
+      <div className="text-center space-y-4">
         <h1 className="uppercase text-3xl font-bold text-green-500">Karma Lama</h1>
         <div className="text-gray-400">Suryabinayak, Bhaktapur</div>
         <a data-tooltip="Click to Call Now" href="tel:9761673294" className="hover:text-green-500 tooltip">+977 9761673294</a> <br />
