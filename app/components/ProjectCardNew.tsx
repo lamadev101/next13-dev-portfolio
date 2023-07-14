@@ -23,16 +23,15 @@ interface ProjectCardProps {
 }
 
 const ProjectCardNew: React.FC<ProjectCardProps> = ({ body, title, githubUrl, webappUrl, screenshot, type }) => {
-  console.log(body)
 
   return (
     <motion.div
       variants={textVariant2}
       initial="hidden"
       whileInView="show"
-      className="rounded-md shadow-2xl drop-shadow-md backdrop-blur shadow-black overflow-hidden hover:shadow-gray-800 hover:bg-black flex flex-col md:flex-row items-center col-span-12 border-[0.5px] border-gray-500 group"
+      className="rounded-md shadow-2xl drop-shadow-md backdrop-blur shadow-black overflow-hidden hover:shadow-gray-800 hover:bg-black grid grid-cols-1 md:grid-cols-5 items-center border-[0.5px] border-gray-500 group gap-4"
     >
-      <div className=" w-full p-4 bg-white md:m-4 col-span-4 relative">
+      <div className=" w-full p-1 bg-white md:m-4 relative md:col-span-2 rounded-md">
         <Image
           src={urlForImage(screenshot).url()}
           alt={title}
@@ -58,7 +57,9 @@ const ProjectCardNew: React.FC<ProjectCardProps> = ({ body, title, githubUrl, we
           </div>
         </div>
       </div>
-      <div className="px-4 pb-2 col-span-8">
+
+      {/* Description */}
+      <div className="px-4 pb-2 md:col-span-3">
         <h1 className="text-[#f1f5f8] text-2xl mb-4">{title}</h1>
 
         {/* Body content */}
@@ -67,7 +68,6 @@ const ProjectCardNew: React.FC<ProjectCardProps> = ({ body, title, githubUrl, we
             <p className="text-gray-400 text-sm">{item.children[0].text}</p>
           </div>
         ))}
-        <p className="text-gray-300 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur necessitatibus voluptate incidunt, ex dolorum nostrum totam perferendis nihil mollitia inventore?</p>
       </div>
     </motion.div>
   )

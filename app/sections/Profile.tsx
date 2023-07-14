@@ -17,18 +17,19 @@ const Profile = () => {
         <Image src="/img/logo.svg" alt="logo" width={100} height={100} className="invert" />
         {/* <div className="text-sm text-white italic"><span>Full Stack</span> <br /> Developer</div> */}
       </div>
-      <div className="bg-[url(/img/star.gif)] mx-8 my-4 rounded-3xl overflow-hidden">
+      <div className="bg-[url(/img/star.gif)] mx-8 my-4 rounded-full overflow-hidden">
         <Image 
           src="/img/profile.png" 
           alt="provile image" 
           width={100} 
           height={100} 
-          style={{width: "100%", height: "35vh", objectFit: 'cover'}}
+          style={{width: "35vh", height: "35vh", objectFit: 'cover'}}
           className="object-cover rounded-full" 
         />
       </div>
-      <div className="text-center space-y-4">
+      <div className="text-center space-y-4 group">
         <h1 className="uppercase text-3xl font-bold text-green-500">Karma Lama</h1>
+        <small className=" text-orange-500 group-hover:underline">Full Stack Web Developer</small>
         <div className="text-gray-400">Suryabinayak, Bhaktapur</div>
         <a data-tooltip="Click to Call Now" href="tel:9761673294" className="hover:text-green-500 tooltip">+977 9761673294</a> <br />
         <a data-tooltip="Click to Send Email" href="mailto:ghisingkarma740@gmail.com" className="hover:text-green-500 tooltip">ghisingkarma740@gmail.com</a>

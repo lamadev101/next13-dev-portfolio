@@ -11,10 +11,14 @@ const client = createClient({
   useCdn: false
 });
 
-export async function getProject(){
-  const projects = await client.fetch(
-    groq `*[_type == "project"]`,
-  )
+export async function getProject() {
+  try {
+    const projects = await client.fetch(
+      groq`*[_type == "project"]`,
+    )
+    return projects
+  } catch (error) {
+    return "Network error: Connection lost."
+  }
 
-  return projects
 }
